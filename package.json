@@ -1,0 +1,26 @@
+{
+  "name": "metric",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha  tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timophey01/node-metric.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timophey01/node-metric/issues"
+  },
+  "homepage": "https://github.com/timophey01/node-metric#readme",
+  "dependencies": {
+    "hot-shots": "6.5.1",
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "mocha": "6.2.1"
+  }
+}
