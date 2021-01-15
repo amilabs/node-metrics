@@ -10,6 +10,7 @@ let IS_DEBUG_MODE = false;
 
 function initMetric(options, onError) {
     metric = new StatsD(options || {});
+    metric.socket.unref();
     if (options.metricPrefix) {
         metricPrefix = options.metricPrefix;
     }
@@ -81,6 +82,6 @@ function wrapAsyncOrCallbackFunction(func, startWrapper, endWrapper) {
     }
 }
 
-module.exports = { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime };
+module.exports = { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime, wrapAsyncOrCallbackFunction };
 
 
