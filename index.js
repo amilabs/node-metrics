@@ -1,4 +1,4 @@
-const { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime, wrapAsyncOrCallbackFunction } = require('./src/metric')
+const { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime, wrapAsyncOrCallbackFunction, incrementSingleMetric } = require('./src/metric')
 const { objectWrapMetric } = require('./src/wrap-object');
 
 module.exports = {
@@ -6,6 +6,7 @@ module.exports = {
     getMetric,
     getStartedTimer,
     writeSingleMetric,
+    incrementSingleMetric,
     wrapAsyncFunction,
     wrapAsyncOrCallbackFunction,
     writeTime,

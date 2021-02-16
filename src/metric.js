@@ -41,6 +41,11 @@ function getStartedTimer(path) {
     };
 }
 
+function incrementSingleMetric(path, value) {
+    IS_DEBUG_MODE && console.debug('Metric [writeSingleMetric]', _.trim(`${metricPrefix}.${path}`, '.'), value);
+    getMetric().increment(_.trim(`${metricPrefix}.${path}`, '.'), value)
+}
+
 function writeSingleMetric(path, value) {
     IS_DEBUG_MODE && console.debug('Metric [writeSingleMetric]', _.trim(`${metricPrefix}.${path}`, '.'), value);
     getMetric().gauge(_.trim(`${metricPrefix}.${path}`, '.'), value)
@@ -82,6 +87,6 @@ function wrapAsyncOrCallbackFunction(func, startWrapper, endWrapper) {
     }
 }
 
-module.exports = { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime, wrapAsyncOrCallbackFunction };
+module.exports = { initMetric, getMetric, getStartedTimer, writeSingleMetric, wrapAsyncFunction, writeTime, wrapAsyncOrCallbackFunction, incrementSingleMetric };
 
 
