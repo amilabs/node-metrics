@@ -18,7 +18,7 @@
   "homepage": "https://github.com/timophey01/node-metric#readme",
   "dependencies": {
     "hot-shots": "6.5.1",
-    "lodash": "4.17.15"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "mocha": "6.2.1"
