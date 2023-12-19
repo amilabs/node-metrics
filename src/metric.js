@@ -9,6 +9,7 @@ let metricPrefix = '';
 let IS_DEBUG_MODE = false;
 
 function initMetric(options, onError) {
+    options.cacheDns = options.cacheDns || true;
     metric = new StatsD(options || {});
     metric.socket.unref();
     if (options.metricPrefix) {
